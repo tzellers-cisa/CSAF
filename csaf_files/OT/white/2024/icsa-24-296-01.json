@@ -143,7 +143,7 @@
           "name": "Secvisogram",
           "version": "2.5.13"
         },
-        "date": "2024-10-28T19:50:40.924Z"
+        "date": "2024-10-29T23:14:12.404Z"
       },
       "id": "ICSA-24-296-01",
       "initial_release_date": "2024-10-22T06:00:00.000000Z",
@@ -169,31 +169,37 @@
                 "category": "product_version_range",
                 "name": "<=10.97.3",
                 "product": {
-                  "name": "ICONICS, Mitsubishi Electric ICONICS Suite including GENESIS64, Hyper Historian, AnalytiX, and MobileHMI: <=10.97.3",
+                  "name": "ICONICS Suite including GENESIS64, Hyper Historian, AnalytiX, and MobileHMI: <=10.97.3",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
             "name": "ICONICS Suite including GENESIS64, Hyper Historian, AnalytiX, and MobileHMI"
-          },
+          }
+        ],
+        "category": "vendor",
+        "name": "ICONICS"
+      },
+      {
+        "name": "Mitsubishi Electric",
+        "category": "vendor",
+        "branches": [
           {
+            "category": "product_name",
+            "name": "Mitsubishi Electric MC Works64",
             "branches": [
               {
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "ICONICS, Mitsubishi Electric Mitsubishi Electric MC Works64: vers:all/*",
-                  "product_id": "CSAFPID-0002"
+                  "product_id": "CSAFPID-0002",
+                  "name": "Mitsubishi Electric MC Works64: all versions"
                 }
               }
-            ],
-            "category": "product_name",
-            "name": "Mitsubishi Electric MC Works64"
+            ]
           }
-        ],
-        "category": "vendor",
-        "name": "ICONICS, Mitsubishi Electric"
+        ]
       }
     ]
   },
