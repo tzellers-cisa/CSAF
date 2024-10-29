@@ -143,7 +143,7 @@
           "name": "Secvisogram",
           "version": "2.5.13"
         },
-        "date": "2024-10-22T16:18:27.791Z"
+        "date": "2024-10-28T19:50:40.924Z"
       },
       "id": "ICSA-24-296-01",
       "initial_release_date": "2024-10-22T06:00:00.000000Z",
@@ -169,37 +169,31 @@
                 "category": "product_version_range",
                 "name": "<=10.97.3",
                 "product": {
-                  "name": "ICONICS Suite including GENESIS64, Hyper Historian, AnalytiX, and MobileHMI: <=10.97.3",
+                  "name": "ICONICS, Mitsubishi Electric ICONICS Suite including GENESIS64, Hyper Historian, AnalytiX, and MobileHMI: <=10.97.3",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
             "name": "ICONICS Suite including GENESIS64, Hyper Historian, AnalytiX, and MobileHMI"
-          }
-        ],
-        "category": "vendor",
-        "name": "ICONICS"
-      },
-      {
-        "branches": [
+          },
           {
-            "name": "Mitsubishi Electric MC Works64",
-            "category": "product_name",
             "branches": [
               {
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "product_id": "CSAFPID-0002",
-                  "name": "Mitsubishi Electric MC Works64"
+                  "name": "ICONICS, Mitsubishi Electric Mitsubishi Electric MC Works64: vers:all/*",
+                  "product_id": "CSAFPID-0002"
                 }
               }
-            ]
+            ],
+            "category": "product_name",
+            "name": "Mitsubishi Electric MC Works64"
           }
         ],
-        "name": "Mitsubishi Electric",
-        "category": "vendor"
+        "category": "vendor",
+        "name": "ICONICS, Mitsubishi Electric"
       }
     ]
   },
@@ -262,7 +256,7 @@
         },
         {
           "category": "mitigation",
-          "details": "For systems that already have v10.97.3 or an earlier version, or MC Works64  installed, verify the permissions on the c:\\ProgramData\\ICONICS folder do not include \"Everyone\".  If this folder is set to provide access to \"Everyone\", remove this access by performing the following steps:\n1. Right click C:\\ProgramData\\ICONICS folder and open the Properties display\n2. Open the Security tab\n3. Click Advanced\n4 Click Change Permissions\n5.  Select \"Everyone\" and check the \"Replace all object permissions entries with inheritable permission entries from this project\" checkbox\n6. Click Remove\n",
+          "details": "For systems that already have v10.97.3 or an earlier version, or MC Works64  installed, verify the permissions on the c:\\ProgramData\\ICONICS folder do not include \"Everyone\".  If this folder is set to provide access to \"Everyone\", remove this access by performing the following steps:\n1. Right click C:\\ProgramData\\ICONICS folder and open the Properties display\n2. Open the Security tab\n3. Click Advanced\n4. Click Change Permissions\n5. Select \"Everyone\" and check the \"Replace all object permissions entries with inheritable permission entries from this project\" checkbox\n6. Click Remove\n",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"
@@ -279,12 +273,21 @@
         },
         {
           "category": "mitigation",
-          "details": "ICONICS and Mitsubishi Electric is releasing security updates as critical fixes/rollup releases. Refer to the [ICONICS Whitepaper on Security Vulnerabilities])https://iconics.com/About/Security/CERT), and to the   for information on the availability of the security updates.",
+          "details": "ICONICS is releasing security updates as critical fixes/rollup releases. For more information on the security updates, please refer to the ICONICS whitepaper on security vulnerabilities, the most recent version of which can be found here.",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"
           ],
           "url": "https://iconics.com/About/Security/CERT"
+        },
+        {
+          "category": "mitigation",
+          "details": "Mitsubishi Electric is releasing security updates as critical fixes/rollup releases. For more information on the security updates, please refer to the the Mitsubishi Electric security advisory.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2024-008_en.pdf"
         }
       ],
       "scores": [
