@@ -116,11 +116,21 @@
         "category": "external",
         "summary": "Recommended Practices",
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/sites/default/files/publications/emailscams0905.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
       }
     ],
-    "title": "Mitsubishi Electric MELSEC iQ-R Series/iQ-F Series (Update A)",
+    "title": "Mitsubishi Electric MELSEC iQ-R Series/iQ-F Series (Update B)",
     "tracking": {
-      "current_release_date": "2024-04-25T06:00:00.000000Z",
+      "current_release_date": "2024-10-31T06:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
@@ -141,10 +151,16 @@
           "legacy_version": "Update A",
           "number": "2",
           "summary": "Update A - Added mitigation information."
+        },
+        {
+          "date": "2024-10-31T06:00:00.000000Z",
+          "legacy_version": "Update B",
+          "number": "3",
+          "summary": "Update B - Added version information to affected products section."
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -197,9 +213,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<=1.01B",
                 "product": {
-                  "name": "Mitsubishi Electric SW1DNN-EIPCTFX5-BD: vers:all/*",
+                  "name": "Mitsubishi Electric SW1DNN-EIPCTFX5-BD: <=1.01B",
                   "product_id": "CSAFPID-0004"
                 }
               }
@@ -236,13 +252,13 @@
       "references": [
         {
           "category": "external",
-          "summary": "web.nvd.nist.gov",
-          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-2060"
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2023-2060"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         },
         {
           "category": "external",
@@ -253,7 +269,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Mitsubishi Electric recommends that users of the affected products take the following actions.:",
+          "details": "Mitsubishi Electric recommends that users of the affected products take the following actions:",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"
@@ -267,22 +283,29 @@
           ]
         },
         {
-          "category": "mitigation",
-          "details": "FX5-ENET/IP: use IP filter function to block access from untrusted hosts. For details on the IP filter function, please refer to the following manual: \"12.1 IP Filter Function\" in the MELSEC iQ-F FX5 User's Manual (Ethernet Communication).",
-          "product_ids": [
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "mitigation",
+          "category": "vendor_fix",
           "details": "RJ71EIP91 firmware version \"06\" or later: FTP function can be disabled in firmware version \"06\" or later. Except when configuring with the EtherNet/IP Configuration Tool, to prevent unauthorized access from outside, set the connection to \"Deny connection\" in the EtherNet/IP Configuration Tool Connection Permission Change function and disable the EtherNet/IP module's FTP function of the EtherNet/IP module. However, firmware versions earlier than \"06\" cannot be updated to version \"06\" or later. For detailed configuration instructions, please refer to the following manuals: MELSEC iQ-R EtherNet/IP Module User's Manual (Application) \"1.3 Ethernet/IP Configuration Tool Connectable Function\".",
           "product_ids": [
             "CSAFPID-0001"
           ]
         },
         {
-          "category": "mitigation",
-          "details": "Mitsubishi Electric recommends that customers take the following mitigation measures to minimize the risk of exploiting these vulnerabilities:",
+          "category": "vendor_fix",
+          "details": "FX5-ENET/IP: use IP filter function to block access from untrusted hosts. For details on the IP filter function, please refer to the following manual: \"12.1 IP Filter Function\" in the MELSEC iQ-F FX5 User's Manual (Ethernet Communication).",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "FX5-ENET/IP firmware version \"1.106\" or later: FTP function can be disabled. Except when configuring with the EtherNet/IP Configuration Tool for FX5-ENET/IP, to prevent unauthorized access from outside, set the connection to \"Deny connection\" in the EtherNet/IP Configuration Tool for FX5-ENET/IP Tool connection setting change function and disable the EtherNet/IP module's FTP function of the EtherNet/IP module. For detailed configuration instructions, please refer to the following manuals. \"Tool connection setting change function\" in the \"Details of buffer memory addresses\" in the \"Appendix 4 Buffer Memory\" in the \"MELSEC iQ-F FX5 EtherNet/IP Module User's Manual\".",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Mitsubishi Electric recommends that customers take the following mitigation measures to minimize the risk of exploiting these vulnerabilities common to RJ71EIP91 and FX5-ENET/IP:",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"
@@ -423,13 +446,13 @@
       "references": [
         {
           "category": "external",
-          "summary": "web.nvd.nist.gov",
-          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-2061"
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2023-2061"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         },
         {
           "category": "external",
@@ -440,7 +463,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Mitsubishi Electric recommends that users of the affected products take the following actions.:",
+          "details": "Mitsubishi Electric recommends that users of the affected products take the following actions:",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"
@@ -454,22 +477,29 @@
           ]
         },
         {
-          "category": "mitigation",
-          "details": "FX5-ENET/IP: use IP filter function to block access from untrusted hosts. For details on the IP filter function, please refer to the following manual: \"12.1 IP Filter Function\" in the MELSEC iQ-F FX5 User's Manual (Ethernet Communication).",
-          "product_ids": [
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "mitigation",
+          "category": "vendor_fix",
           "details": "RJ71EIP91 firmware version \"06\" or later: FTP function can be disabled in firmware version \"06\" or later. Except when configuring with the EtherNet/IP Configuration Tool, to prevent unauthorized access from outside, set the connection to \"Deny connection\" in the EtherNet/IP Configuration Tool Connection Permission Change function and disable the EtherNet/IP module's FTP function of the EtherNet/IP module. However, firmware versions earlier than \"06\" cannot be updated to version \"06\" or later. For detailed configuration instructions, please refer to the following manuals: MELSEC iQ-R EtherNet/IP Module User's Manual (Application) \"1.3 Ethernet/IP Configuration Tool Connectable Function\".",
           "product_ids": [
             "CSAFPID-0001"
           ]
         },
         {
-          "category": "mitigation",
-          "details": "Mitsubishi Electric recommends that customers take the following mitigation measures to minimize the risk of exploiting these vulnerabilities:",
+          "category": "vendor_fix",
+          "details": "FX5-ENET/IP: use IP filter function to block access from untrusted hosts. For details on the IP filter function, please refer to the following manual: \"12.1 IP Filter Function\" in the MELSEC iQ-F FX5 User's Manual (Ethernet Communication).",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "FX5-ENET/IP firmware version \"1.106\" or later: FTP function can be disabled. Except when configuring with the EtherNet/IP Configuration Tool for FX5-ENET/IP, to prevent unauthorized access from outside, set the connection to \"Deny connection\" in the EtherNet/IP Configuration Tool for FX5-ENET/IP Tool connection setting change function and disable the EtherNet/IP module's FTP function of the EtherNet/IP module. For detailed configuration instructions, please refer to the following manuals. \"Tool connection setting change function\" in the \"Details of buffer memory addresses\" in the \"Appendix 4 Buffer Memory\" in the \"MELSEC iQ-F FX5 EtherNet/IP Module User's Manual\".",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Mitsubishi Electric recommends that customers take the following mitigation measures to minimize the risk of exploiting these vulnerabilities common to RJ71EIP91 and FX5-ENET/IP:",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"
@@ -610,13 +640,13 @@
       "references": [
         {
           "category": "external",
-          "summary": "web.nvd.nist.gov",
-          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-2062"
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2023-2062"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         },
         {
           "category": "external",
@@ -627,7 +657,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Mitsubishi Electric recommends that users of the affected products take the following actions.:",
+          "details": "Mitsubishi Electric recommends that users of the affected products take the following actions:",
           "product_ids": [
             "CSAFPID-0003",
             "CSAFPID-0004"
@@ -642,12 +672,12 @@
           "url": "https://www.mitsubishielectric.com/fa/#software"
         },
         {
-          "category": "mitigation",
-          "details": "Mitsubishi Electric recommends that customers take the following mitigation measures to minimize the risk of exploiting these vulnerabilities:",
+          "category": "vendor_fix",
+          "details": "SW1DNN-EIPCTFX5-BD: Download and update the fixed version Software version \"1.02C\" or later.",
           "product_ids": [
-            "CSAFPID-0003",
             "CSAFPID-0004"
-          ]
+          ],
+          "url": "https://www.mitsubishielectric.com/fa/#software"
         },
         {
           "category": "mitigation",
@@ -682,7 +712,7 @@
           ]
         },
         {
-          "category": "mitigation",
+          "category": "vendor_fix",
           "details": "Mitsubishi Electric recommends that customers take the following mitigation measures to minimize the risk of exploiting these vulnerabilities common to SW1DNN-EIPCT-BD and SW1DNN-EIPCTFX5-BD:",
           "product_ids": [
             "CSAFPID-0003",
@@ -792,13 +822,13 @@
       "references": [
         {
           "category": "external",
-          "summary": "web.nvd.nist.gov",
-          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-2063"
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2023-2063"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
         },
         {
           "category": "external",
@@ -809,7 +839,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Mitsubishi Electric recommends that users of the affected products take the following actions.:",
+          "details": "Mitsubishi Electric recommends that users of the affected products take the following actions:",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"
@@ -823,22 +853,29 @@
           ]
         },
         {
-          "category": "mitigation",
-          "details": "FX5-ENET/IP: use IP filter function to block access from untrusted hosts. For details on the IP filter function, please refer to the following manual: \"12.1 IP Filter Function\" in the MELSEC iQ-F FX5 User's Manual (Ethernet Communication).",
-          "product_ids": [
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "mitigation",
+          "category": "vendor_fix",
           "details": "RJ71EIP91 firmware version \"06\" or later: FTP function can be disabled in firmware version \"06\" or later. Except when configuring with the EtherNet/IP Configuration Tool, to prevent unauthorized access from outside, set the connection to \"Deny connection\" in the EtherNet/IP Configuration Tool Connection Permission Change function and disable the EtherNet/IP module's FTP function of the EtherNet/IP module. However, firmware versions earlier than \"06\" cannot be updated to version \"06\" or later. For detailed configuration instructions, please refer to the following manuals: MELSEC iQ-R EtherNet/IP Module User's Manual (Application) \"1.3 Ethernet/IP Configuration Tool Connectable Function\".",
           "product_ids": [
             "CSAFPID-0001"
           ]
         },
         {
-          "category": "mitigation",
-          "details": "Mitsubishi Electric recommends that customers take the following mitigation measures to minimize the risk of exploiting these vulnerabilities:",
+          "category": "vendor_fix",
+          "details": "FX5-ENET/IP: use IP filter function to block access from untrusted hosts. For details on the IP filter function, please refer to the following manual: \"12.1 IP Filter Function\" in the MELSEC iQ-F FX5 User's Manual (Ethernet Communication).",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "FX5-ENET/IP firmware version \"1.106\" or later: FTP function can be disabled. Except when configuring with the EtherNet/IP Configuration Tool for FX5-ENET/IP, to prevent unauthorized access from outside, set the connection to \"Deny connection\" in the EtherNet/IP Configuration Tool for FX5-ENET/IP Tool connection setting change function and disable the EtherNet/IP module's FTP function of the EtherNet/IP module. For detailed configuration instructions, please refer to the following manuals. \"Tool connection setting change function\" in the \"Details of buffer memory addresses\" in the \"Appendix 4 Buffer Memory\" in the \"MELSEC iQ-F FX5 EtherNet/IP Module User's Manual\".",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Mitsubishi Electric recommends that customers take the following mitigation measures to minimize the risk of exploiting these vulnerabilities common to RJ71EIP91 and FX5-ENET/IP:",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"

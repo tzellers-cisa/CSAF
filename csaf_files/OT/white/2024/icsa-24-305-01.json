@@ -2,11 +2,8 @@
   "document": {
     "acknowledgments": [
       {
-        "names": [
-          "Reid Wightman"
-        ],
-        "organization": "Dragos",
-        "summary": "reporting these vulnerabilities to Mitsubishi Electric"
+        "organization": "Tenable Network Security",
+        "summary": "reporting these vulnerabilities to Rockwell Automation"
       }
     ],
     "category": "csaf_security_advisory",
@@ -27,7 +24,7 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of these vulnerabilities could allow an attacker to disclose, tamper with, destroy or delete information in the products, or cause a denial-of-service (DoS) condition on the products.",
+        "text": "Successful exploitation of these vulnerabilities could allow an attacker to send crafted messages to the device resulting in database manipulation or a denial-of-service condition.",
         "title": "Risk evaluation"
       },
       {
@@ -42,8 +39,28 @@
       },
       {
         "category": "other",
-        "text": "Japan",
+        "text": "United States",
         "title": "Company headquarters location"
+      },
+      {
+        "category": "general",
+        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of these vulnerabilities, such as:",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Locate control system networks and remote devices behind firewalls and isolating them from business networks.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices.",
+        "title": "Recommended Practices"
       },
       {
         "category": "general",
@@ -85,13 +102,18 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-24-030-02 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2024/icsa-24-030-02.json"
+        "summary": "ICS Advisory ICSA-24-305-01 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2024/icsa-24-305-01.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-24-030-02 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-030-02"
+        "summary": "ICSA Advisory ICSA-24-305-01 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-305-01"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
       },
       {
         "category": "external",
@@ -107,11 +129,6 @@
         "category": "external",
         "summary": "Recommended Practices",
         "url": "https://www.cisa.gov/topics/industrial-control-systems"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
       },
       {
         "category": "external",
@@ -134,7 +151,7 @@
         "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
       }
     ],
-    "title": "Mitsubishi Electric FA Engineering Software Products (Update A)",
+    "title": "Rockwell Automation FactoryTalk ThinManager",
     "tracking": {
       "current_release_date": "2024-10-31T06:00:00.000000Z",
       "generator": {
@@ -143,24 +160,18 @@
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-24-030-02",
-      "initial_release_date": "2024-01-30T07:00:00.000000Z",
+      "id": "ICSA-24-305-01",
+      "initial_release_date": "2024-10-31T06:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2024-01-30T07:00:00.000000Z",
+          "date": "2024-10-31T06:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
-        },
-        {
-          "date": "2024-10-31T06:00:00.000000Z",
-          "legacy_version": "Update A",
-          "number": "2",
-          "summary": "Update A - Update to affected products and mitigation section"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "1"
     }
   },
   "product_tree": {
@@ -171,137 +182,109 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=3.0",
+                "name": ">=11.2.0|<11.2.9",
                 "product": {
-                  "name": "Mitsubishi Electric EZSocket: >=3.0",
+                  "name": "Rockwell Automation ThinManager: >=11.2.0|<11.2.9",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "EZSocket"
+            "name": "ThinManager"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": ">=12.0.0|<12.0.7",
                 "product": {
-                  "name": "Mitsubishi Electric GT Designer3 Version1(GOT1000): vers:all/*",
+                  "name": "Rockwell Automation ThinManager: >=12.0.0|<12.0.7",
                   "product_id": "CSAFPID-0002"
                 }
               }
             ],
             "category": "product_name",
-            "name": "GT Designer3 Version1(GOT1000)"
+            "name": "ThinManager"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": ">=12.1.0|<12.1.8",
                 "product": {
-                  "name": "Mitsubishi Electric GT Designer3 Version1(GOT2000): vers:all/*",
+                  "name": "Rockwell Automation ThinManager: >=12.1.0|<12.1.8",
                   "product_id": "CSAFPID-0003"
                 }
               }
             ],
             "category": "product_name",
-            "name": "GT Designer3 Version1(GOT2000)"
+            "name": "ThinManager"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=1.11M",
+                "name": ">=13.0.0|<13.0.5",
                 "product": {
-                  "name": "Mitsubishi Electric GX Works2: >=1.11M",
+                  "name": "Rockwell Automation ThinManager: >=13.0.0|<13.0.5",
                   "product_id": "CSAFPID-0004"
                 }
               }
             ],
             "category": "product_name",
-            "name": "GX Works2"
+            "name": "ThinManager"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<=1.106L",
+                "name": ">=13.1.0|<13.1.3",
                 "product": {
-                  "name": "Mitsubishi Electric GX Works3: <=1.106L",
+                  "name": "Rockwell Automation ThinManager: >=13.1.0|<13.1.3",
                   "product_id": "CSAFPID-0005"
                 }
               }
             ],
             "category": "product_name",
-            "name": "GX Works3"
+            "name": "ThinManager"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=1.04E",
+                "name": ">=13.2.0|<13.2.2",
                 "product": {
-                  "name": "Mitsubishi Electric MELSOFT Navigator: >=1.04E",
+                  "name": "Rockwell Automation ThinManager: >=13.2.0|<13.2.2",
                   "product_id": "CSAFPID-0006"
                 }
               }
             ],
             "category": "product_name",
-            "name": "MELSOFT Navigator"
+            "name": "ThinManager"
           },
           {
             "branches": [
               {
-                "category": "product_version_range",
-                "name": "vers:all/*",
+                "category": "product_version",
+                "name": "14.0.0",
                 "product": {
-                  "name": "Mitsubishi Electric MT Works2: vers:all/*",
+                  "name": "Rockwell Automation ThinManager: 14.0.0",
                   "product_id": "CSAFPID-0007"
                 }
               }
             ],
             "category": "product_name",
-            "name": "MT Works2"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": ">=4.00A",
-                "product": {
-                  "name": "Mitsubishi Electric MX Component: >=4.00A",
-                  "product_id": "CSAFPID-0008"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "MX Component"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "Mitsubishi Electric MX OPC Server DA/UA (Software packaged with MC Works64): vers:all/*",
-                  "product_id": "CSAFPID-0009"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "MX OPC Server DA/UA (Software packaged with MC Works64)"
+            "name": "ThinManager"
           }
         ],
         "category": "vendor",
-        "name": "Mitsubishi Electric"
+        "name": "Rockwell Automation"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-6942",
+      "cve": "CVE-2024-10386",
       "cwe": {
         "id": "CWE-306",
         "name": "Missing Authentication for Critical Function"
@@ -309,7 +292,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "A remote unauthenticated attacker may be able to bypass authentication by sending specially crafted packets and connect to the products illegally. ",
+          "text": "An authentication vulnerability exists in the affected product. The vulnerability could allow a threat actor with network access to send crafted messages to the device, potentially resulting in database manipulation.",
           "title": "Vulnerability Summary"
         }
       ],
@@ -321,203 +304,30 @@
           "CSAFPID-0004",
           "CSAFPID-0005",
           "CSAFPID-0006",
-          "CSAFPID-0007",
-          "CSAFPID-0008",
-          "CSAFPID-0009"
+          "CSAFPID-0007"
         ]
       },
       "references": [
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2023-6942"
-        },
-        {
-          "category": "external",
-          "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
-        }
-      ],
-      "remediations": [
-        {
-          "category": "mitigation",
-          "details": "Mitsubishi Electric recommends users take the following mitigation measures to minimize the risk of exploiting these vulnerabilities:",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "GX Works3: Download version 1.110Q or later",
-          "product_ids": [
-            "CSAFPID-0005"
-          ],
-          "url": "https://www.mitsubishielectric.com/fa/download/index.html"
-        },
-        {
-          "category": "mitigation",
-          "details": "When connecting your personal computer with the affected products to the internet, use a firewall, virtual private network (VPN), etc., to prevent unauthorized access and allow only trusted users to remote login.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Use your personal computer with the affected products within a LAN and block access from untrusted networks and hosts.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Restrict physical access to your computer using the affected products as well as to the personal computers and network devices that can communicate with it.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Install antivirus software on your personal computer using the affected products and on the personal computers that can communicate with it.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Don't open untrusted files or click untrusted links.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "For more information, see Mitsubishi Electric's security advisory.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ],
-          "url": "https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2023-020_en.pdf"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-            "version": "3.1"
-          },
-          "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-6943",
-      "cwe": {
-        "id": "CWE-470",
-        "name": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')"
-      },
-      "notes": [
-        {
-          "category": "summary",
-          "text": "An attacker may be able to execute a malicious code by remotely calling a function with a path to a malicious library while connected to the products. As a result, unauthorized users may disclose, tamper with, destroy or delete information in the products, or cause a denial-of-service (DoS) condition on the products.",
-          "title": "Vulnerability Summary"
-        }
-      ],
-      "product_status": {
-        "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002",
-          "CSAFPID-0003",
-          "CSAFPID-0004",
-          "CSAFPID-0005",
-          "CSAFPID-0006",
-          "CSAFPID-0007",
-          "CSAFPID-0008",
-          "CSAFPID-0009"
-        ]
-      },
-      "references": [
-        {
-          "category": "external",
-          "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2023-6943"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-10386"
         },
         {
           "category": "external",
           "summary": "www.first.org",
           "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
         }
       ],
       "remediations": [
         {
-          "category": "mitigation",
-          "details": "Mitsubishi Electric recommends users take the following mitigation measures to minimize the risk of exploiting these vulnerabilities:",
+          "category": "vendor_fix",
+          "details": "Rockwell Automation has provided a fix for the affected versions on the FactoryTalk ThinManager download site.",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
@@ -525,22 +335,53 @@
             "CSAFPID-0004",
             "CSAFPID-0005",
             "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
+            "CSAFPID-0007"
+          ],
+          "url": "https://thinmanager.com/downloads/"
+        },
+        {
+          "category": "mitigation",
+          "details": "Rockwell Automation encourages users of the affected software to apply these risk mitigations if possible.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007"
           ]
         },
         {
           "category": "vendor_fix",
-          "details": "GX Works3: Download version 1.110Q or later",
+          "details": "Implement network hardening for ThinManager Device(s) by limiting communications to TCP 2031 to only the devices that need connection to the ThinManager.",
           "product_ids": [
-            "CSAFPID-0005"
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For information on how to mitigate security risks on industrial automation control systems, users are encouraged to implement Rockwell Automation's suggested security best practices to minimize the risk of the vulnerability.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007"
           ],
-          "url": "https://www.mitsubishielectric.com/fa/download/index.html"
+          "url": "https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight"
         },
         {
           "category": "mitigation",
-          "details": "When connecting your personal computer with the affected products to the internet, use a firewall, virtual private network (VPN), etc., to prevent unauthorized access and allow only trusted users to remote login.",
+          "details": "For more information, see Rockwell Automation's security bulletin.",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
@@ -548,86 +389,9 @@
             "CSAFPID-0004",
             "CSAFPID-0005",
             "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Use your personal computer with the affected products within a LAN and block access from untrusted networks and hosts.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Restrict physical access to your computer using the affected products as well as to the personal computers and network devices that can communicate with it.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Install antivirus software on your personal computer using the affected products and on the personal computers that can communicate with it.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Don't open untrusted files or click untrusted links.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "For more information, see Mitsubishi Electric's security advisory.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
+            "CSAFPID-0007"
           ],
-          "url": "https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2023-020_en.pdf"
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories.html"
         }
       ],
       "scores": [
@@ -645,9 +409,138 @@
             "CSAFPID-0004",
             "CSAFPID-0005",
             "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009"
+            "CSAFPID-0007"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-10387",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A denial-of-service vulnerability exists in the affected product. The vulnerability could allow a threat actor with network access to send crafted messages to the device, resulting in a denial-of-service condition.",
+          "title": "Vulnerability Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002",
+          "CSAFPID-0003",
+          "CSAFPID-0004",
+          "CSAFPID-0005",
+          "CSAFPID-0006",
+          "CSAFPID-0007"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-10387"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Rockwell Automation has provided a fix for the affected versions on the FactoryTalk ThinManager download site.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007"
+          ],
+          "url": "https://thinmanager.com/downloads/"
+        },
+        {
+          "category": "mitigation",
+          "details": "Rockwell Automation encourages users of the affected software to apply these risk mitigations if possible.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Implement network hardening for ThinManager Device(s) by limiting communications to TCP 2031 to only the devices that need connection to the ThinManager.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For information on how to mitigate security risks on industrial automation control systems, users are encouraged to implement Rockwell Automation's suggested security best practices to minimize the risk of the vulnerability.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007"
+          ],
+          "url": "https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight"
+        },
+        {
+          "category": "mitigation",
+          "details": "For more information, see Rockwell Automation's security bulletin.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007"
+          ],
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories.html"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007"
           ]
         }
       ]
