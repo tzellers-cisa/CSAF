@@ -2,10 +2,7 @@
   "document": {
     "acknowledgments": [
       {
-        "names": [
-          "Diego Zaffaroni"
-        ],
-        "organization": "Nozomi Networks",
+        "organization": "Subnet Solutions Inc",
         "summary": "reporting these vulnerabilities to CISA"
       }
     ],
@@ -27,12 +24,12 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of these vulnerabilities could allow an attacker to steal sensitive information and gain access to the device.",
+        "text": "Successful exploitation of these vulnerabilities could allow an attacker to cause an integer overflow on the affected device.",
         "title": "Risk evaluation"
       },
       {
         "category": "other",
-        "text": "Multiple",
+        "text": "Critical Manufacturing, Energy",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -42,7 +39,7 @@
       },
       {
         "category": "other",
-        "text": "United States",
+        "text": "Canada",
         "title": "Company headquarters location"
       },
       {
@@ -105,13 +102,13 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-23-269-05 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2023/icsa-23-269-05.json"
+        "summary": "ICS Advisory ICSA-24-317-01 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2024/icsa-24-317-01.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-23-269-05 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-23-269-05"
+        "summary": "ICSA Advisory ICSA-24-317-01 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-317-01"
       },
       {
         "category": "external",
@@ -142,22 +139,32 @@
         "category": "external",
         "summary": "Recommended Practices",
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/sites/default/files/publications/emailscams0905.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
       }
     ],
-    "title": "Baker Hughes Bently Nevada 3500",
+    "title": "Subnet Solutions PowerSYSTEM Center",
     "tracking": {
-      "current_release_date": "2023-09-26T06:00:00.000000Z",
+      "current_release_date": "2024-11-12T07:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-23-269-05",
-      "initial_release_date": "2023-09-26T06:00:00.000000Z",
+      "id": "ICSA-24-317-01",
+      "initial_release_date": "2024-11-12T07:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2023-09-26T06:00:00.000000Z",
+          "date": "2024-11-12T07:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
@@ -174,34 +181,34 @@
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "5.05",
+                "category": "product_version_range",
+                "name": "<=v5.22.x",
                 "product": {
-                  "name": "Bently Nevada 3500 Rack (TDI Firmware): 5.05",
+                  "name": "Subnet Solutions PowerSYSTEM Center PSC 2020: <=v5.22.x",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Bently Nevada 3500 Rack (TDI Firmware)"
+            "name": "PowerSYSTEM Center PSC 2020"
           }
         ],
         "category": "vendor",
-        "name": "Baker Hughes - Bently Nevada"
+        "name": "Subnet Solutions"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-34437",
+      "cve": "CVE-2024-45490",
       "cwe": {
-        "id": "CWE-732",
-        "name": "Incorrect Permission Assignment for Critical Resource"
+        "id": "CWE-611",
+        "name": "Improper Restriction of XML External Entity Reference"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "Baker Hughes - Bently Nevada 3500 System TDI Firmware version 5.05 has a vulnerability in their password retrieval functionality which could be used by an attacker to access passwords stored on the device.",
+          "text": "An issue was discovered in libexpat before 2.6.3. xmlparse.c does not reject a negative length for XML_ParseBuffer.",
           "title": "Vulnerability Summary"
         }
       ],
@@ -213,40 +220,53 @@
       "references": [
         {
           "category": "external",
-          "summary": "web.nvd.nist.gov",
-          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-34437"
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-45490"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Baker Hughes � Bently Nevada recommends that users follow their hardening guidelines to reduce the risk of exploitation. Customers who have registered for access to Baker Hughes DAM may directly access the hardening guideline at https://dam.bakerhughes.com/media/?mediaId=32F7FC2F-9F22-4C69-BB847565B7834D08.",
+          "details": "Subnet Solutions inc. reports that dependencies have been updated and vulnerabilities are to be addressed in PowerSYSTEM Center 2020 Update 23 release.",
           "product_ids": [
             "CSAFPID-0001"
-          ],
-          "url": "https://dam.bakerhughes.com/media/?mediaId=32F7FC2F-9F22-4C69-BB847565B7834D08"
+          ]
         },
         {
           "category": "mitigation",
-          "details": "For customers that do not have access to Baker Hughes DAM may send an email tobentlysupport@bakerhughes.com to request document 106M9733.",
+          "details": "Subnet Solutions inc. strongly recommends users update to the latest version. If this is not possible, the following mitigations have been identified:",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Apply application allow-listing to prevent unauthorized executables from running.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Ensure Data Execution Prevention (DEP) and Address Space Layout Randomization (ASLR) are enabled within the operating system. Memory protection controls can be enabled via Windows Security. Please refer to this article for reference.",
           "product_ids": [
             "CSAFPID-0001"
           ],
-          "url": "mailto:bentlysupport@bakerhughes.com"
+          "url": "https://support.microsoft.com/en-us/topic/what-is-data-execution-prevention-dep-60dabc2b-90db-45fc-9b18-512419135817"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-            "version": "3.0"
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
           },
           "products": [
             "CSAFPID-0001"
@@ -255,15 +275,15 @@
       ]
     },
     {
-      "cve": "CVE-2023-34441",
+      "cve": "CVE-2024-45491",
       "cwe": {
-        "id": "CWE-319",
-        "name": "Cleartext Transmission of Sensitive Information"
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "Baker Hughes - Bently Nevada 3500 System TDI Firmware version 5.05 authentication secrets, used with the Connect Password, are passed in cleartext with every request to the device. An attacker could steal the authentication secret from communication traffic to the device and reuse it for arbitrary requests.",
+          "text": "An issue was discovered in libexpat before 2.6.3. dtdCopy in xmlparse.c can have an integer overflow for nDefaultAtts on 32-bit platforms (where UINT_MAX equals SIZE_MAX).",
           "title": "Vulnerability Summary"
         }
       ],
@@ -275,40 +295,53 @@
       "references": [
         {
           "category": "external",
-          "summary": "web.nvd.nist.gov",
-          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-34441"
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-45491"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:L"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Baker Hughes - Bently Nevada recommends that users follow their hardening guidelines to reduce the risk of exploitation. Customers who have registered for access to Baker Hughes DAM may directly access the hardening guideline at https://dam.bakerhughes.com/media/?mediaId=32F7FC2F-9F22-4C69-BB847565B7834D08.",
+          "details": "Subnet Solutions inc. reports that dependencies have been updated and vulnerabilities are to be addressed in PowerSYSTEM Center 2020 Update 23 release.",
           "product_ids": [
             "CSAFPID-0001"
-          ],
-          "url": "https://dam.bakerhughes.com/media/?mediaId=32F7FC2F-9F22-4C69-BB847565B7834D08"
+          ]
         },
         {
           "category": "mitigation",
-          "details": "For customers that do not have access to Baker Hughes DAM may send an email tobentlysupport@bakerhughes.com to request document 106M9733.",
+          "details": "Subnet Solutions inc. strongly recommends users update to the latest version. If this is not possible, the following mitigations have been identified:",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Apply application allow-listing to prevent unauthorized executables from running.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Ensure Data Execution Prevention (DEP) and Address Space Layout Randomization (ASLR) are enabled within the operating system. Memory protection controls can be enabled via Windows Security. Please refer to this article for reference.",
           "product_ids": [
             "CSAFPID-0001"
           ],
-          "url": "mailto:bentlysupport@bakerhughes.com"
+          "url": "https://support.microsoft.com/en-us/topic/what-is-data-execution-prevention-dep-60dabc2b-90db-45fc-9b18-512419135817"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.8,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.0/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:L",
-            "version": "3.0"
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
           },
           "products": [
             "CSAFPID-0001"
@@ -317,15 +350,15 @@
       ]
     },
     {
-      "cve": "CVE-2023-36857",
+      "cve": "CVE-2024-45492",
       "cwe": {
-        "id": "CWE-294",
-        "name": "Authentication Bypass by Capture-replay"
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "Baker Hughes - Bently Nevada 3500 System TDI Firmware version 5.05 accepts out-of-sequence messages from older communications. This could allow an attacker to replay older captured packets of traffic to the device to gain access.",
+          "text": "An issue was discovered in libexpat before 2.6.3. nextScaffoldPart in xmlparse.c can have an integer overflow for m_groupSize on 32-bit platforms (where UINT_MAX equals SIZE_MAX).",
           "title": "Vulnerability Summary"
         }
       ],
@@ -337,40 +370,53 @@
       "references": [
         {
           "category": "external",
-          "summary": "web.nvd.nist.gov",
-          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-36857"
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-45492"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Baker Hughes - Bently Nevada recommends that users follow their hardening guidelines to reduce the risk of exploitation. Customers who have registered for access to Baker Hughes DAM may directly access the hardening guideline at https://dam.bakerhughes.com/media/?mediaId=32F7FC2F-9F22-4C69-BB847565B7834D08.",
+          "details": "Subnet Solutions inc. reports that dependencies have been updated and vulnerabilities are to be addressed in PowerSYSTEM Center 2020 Update 23 release.",
           "product_ids": [
             "CSAFPID-0001"
-          ],
-          "url": "https://dam.bakerhughes.com/media/?mediaId=32F7FC2F-9F22-4C69-BB847565B7834D08"
+          ]
         },
         {
           "category": "mitigation",
-          "details": "For customers that do not have access to Baker Hughes DAM may send an email tobentlysupport@bakerhughes.com to request document 106M9733.",
+          "details": "Subnet Solutions inc. strongly recommends users update to the latest version. If this is not possible, the following mitigations have been identified:",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Apply application allow-listing to prevent unauthorized executables from running.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Ensure Data Execution Prevention (DEP) and Address Space Layout Randomization (ASLR) are enabled within the operating system. Memory protection controls can be enabled via Windows Security. Please refer to this article for reference.",
           "product_ids": [
             "CSAFPID-0001"
           ],
-          "url": "mailto:bentlysupport@bakerhughes.com"
+          "url": "https://support.microsoft.com/en-us/topic/what-is-data-execution-prevention-dep-60dabc2b-90db-45fc-9b18-512419135817"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.4,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
-            "version": "3.0"
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
           },
           "products": [
             "CSAFPID-0001"
