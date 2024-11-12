@@ -2,10 +2,7 @@
   "document": {
     "acknowledgments": [
       {
-        "names": [
-          "Roni Gavrilov"
-        ],
-        "organization": "OTORIO",
+        "organization": "Rockwell Automation",
         "summary": "reporting this vulnerability to CISA"
       }
     ],
@@ -27,7 +24,7 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of this vulnerability could allow an attacker to cause a denial-of-service, rendering the device unresponsive by sending arbitrary UDP messages.",
+        "text": "Successful exploitation of this vulnerability could allow a local low-privileged user to escalate their privileges by changing the macro to execute arbitrary code.",
         "title": "Risk evaluation"
       },
       {
@@ -42,7 +39,7 @@
       },
       {
         "category": "other",
-        "text": "Germany",
+        "text": "United States",
         "title": "Company headquarters location"
       },
       {
@@ -92,26 +89,6 @@
       },
       {
         "category": "general",
-        "text": "CISA also recommends users take the following measures to protect themselves from social engineering attacks:",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Do not click web links or open attachments in unsolicited email messages.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Refer to Recognizing and Avoiding Email Scams for more information on avoiding email scams.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Refer to Avoiding Social Engineering and Phishing Attacks for more information on social engineering attacks.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
         "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time.",
         "title": "Recommended Practices"
       }
@@ -125,13 +102,13 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-24-312-03 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2024/icsa-24-312-03.json"
+        "summary": "ICS Advisory ICSA-24-317-03 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2024/icsa-24-317-03.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-24-312-03 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-312-03"
+        "summary": "ICSA Advisory ICSA-24-317-03 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-317-03"
       },
       {
         "category": "external",
@@ -156,38 +133,38 @@
       {
         "category": "external",
         "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/sites/default/files/publications/emailscams0905.pdf"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
         "url": "https://us-cert.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
       },
       {
         "category": "external",
         "summary": "Recommended Practices",
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/sites/default/files/publications/emailscams0905.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
       }
     ],
-    "title": "Bosch Rexroth IndraDrive",
+    "title": "Rockwell Automation FactoryTalk View ME",
     "tracking": {
-      "current_release_date": "2024-11-07T07:00:00.000000Z",
+      "current_release_date": "2024-11-12T07:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-24-312-03",
-      "initial_release_date": "2024-11-07T07:00:00.000000Z",
+      "id": "ICSA-24-317-03",
+      "initial_release_date": "2024-11-12T07:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2024-11-07T07:00:00.000000Z",
+          "date": "2024-11-12T07:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
@@ -205,33 +182,33 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "17VRS<20V36",
+                "name": "<=v14.0",
                 "product": {
-                  "name": "Bosch Rexroth Bosch Rexroth AG IndraDrive FWA-INDRV-MP: 17VRS<20V36",
+                  "name": "Rockwell Automation FactoryTalk View ME, when using default folder privileges: <=v14.0",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Bosch Rexroth AG IndraDrive FWA-INDRV-MP"
+            "name": "FactoryTalk View ME, when using default folder privileges"
           }
         ],
         "category": "vendor",
-        "name": "Bosch Rexroth"
+        "name": "Rockwell Automation"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2024-48989",
+      "cve": "CVE-2024-37365",
       "cwe": {
-        "id": "CWE-400",
-        "name": "Uncontrolled Resource Consumption"
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "A vulnerability in the PROFINET stack implementation of the IndraDrive of Bosch Rexroth allows an attacker to cause a denial-of-service, rendering the device unresponsive by sending arbitrary UDP messages.",
+          "text": "A remote code execution vulnerability exists in FactoryTalk View ME. The vulnerability allows users to save projects within the public directory allowing anyone with local access to modify and/or delete files. Additionally, a malicious user could potentially leverage this vulnerability to escalate their privileges by changing the macro to execute arbitrary code. ",
           "title": "Vulnerability Summary"
         }
       ],
@@ -244,65 +221,78 @@
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2024-48989"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-37365"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
         }
       ],
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Bosch Rexroth has fixed this vulnerability starting with FWA-INDRV-MP-20V36. Bosch Rexroth recommends updating as soon as possible.",
+          "details": "Rockwell Automation has corrected this problem in V15.0.",
           "product_ids": [
             "CSAFPID-0001"
           ]
         },
         {
           "category": "mitigation",
-          "details": "In use cases in which a device update is not possible or not feasible, Bosch Rexroth recommends compensatory measures which prevent or at least complicate taking advantage of the vulnerability. Always define such compensatory measures individually, in the context of the operational environment.",
+          "details": "Rockwell Automation encourages users of the affected software, who are not able to upgrade to one of the corrected versions, to apply the following risk mitigations where possible.",
           "product_ids": [
             "CSAFPID-0001"
           ]
         },
         {
           "category": "mitigation",
-          "details": "Some possible measures are described in \"Security Manual Electric Drives and Controls\", like network segmentation. In general, it is highly recommended to implement the measures described in \"Security Manual Drives and Controls\".",
+          "details": "To enhance security and help prevent unauthorized modifications to HMI project files, harden the Windows OS by removing the INTERACTIVE group from the folder's security properties.",
           "product_ids": [
             "CSAFPID-0001"
-          ],
-          "url": "https://www.boschrexroth.com/en/us/media-details/c21792b6-da0b-4aaf-95ea-aaacfeb73139"
+          ]
         },
         {
           "category": "mitigation",
-          "details": "For more information, refer to the Bosch PSIRT Security Advisory BOSCH-SA-315415",
+          "details": "Add specific users or user groups and assign their permissions to this folder using the least privileges principle. Users with read-only permission can still test run and run the FactoryTalk View ME Station.",
           "product_ids": [
             "CSAFPID-0001"
-          ],
-          "url": "https://psirt.bosch.com/security-advisories/BOSCH-SA-315415.html"
+          ]
         },
         {
           "category": "mitigation",
-          "details": "Please contact the Bosch PSIRT if you have feedback, comments, or additional information about this vulnerability at: psirt@bosch.com .",
+          "details": "Guidance can be found in FactoryTalk View ME v14 Help topic: \"HMI projects folder settings\". It can be opened through the FactoryTalk View ME Studio menu \"help\\Contents\\FactoryTalk View ME Help\\Create a Machine Edition application->Open applications->HMI project folder settings\".",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Security Best Practices",
           "product_ids": [
             "CSAFPID-0001"
           ],
-          "url": "mailto:psirt@bosch.com"
+          "url": "https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight"
+        },
+        {
+          "category": "mitigation",
+          "details": "For more information, see Rockwell Automation's security advisory",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories.html"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.5,
+            "baseScore": 7.3,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
