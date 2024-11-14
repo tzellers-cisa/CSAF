@@ -7,7 +7,7 @@
       },
       {
         "organization": "Tenable",
-        "summary": "reporting this vulnerability to Siemens."
+        "summary": "coordinating disclosure with Siemens."
       }
     ],
     "category": "csaf_security_advisory",
@@ -23,7 +23,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Siemens User Management Component (UMC) is affected by a heap-based buffer overflow vulnerability which could allow an unauthenticated remote attacker arbitrary code execution.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Siemens User Management Component (UMC) is affected by a heap-based buffer overflow vulnerability which could allow an unauthenticated remote attacker arbitrary code execution.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -38,7 +38,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       },
       {
@@ -167,7 +167,7 @@
     ],
     "title": "Siemens User Management Component (UMC)",
     "tracking": {
-      "current_release_date": "2024-09-10T00:00:00.000000Z",
+      "current_release_date": "2024-11-12T00:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
@@ -182,10 +182,22 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2024-10-08T00:00:00.000000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for Totally Integrated Automation Portal (TIA Portal) V19 and clarified formulation for mitigation"
+        },
+        {
+          "date": "2024-11-12T00:00:00.000000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added affected products Opcenter Execution Foundation, Opcenter Quality and Opcenter RDL. Added fix for Totally Integrated Automation Portal (TIA Portal) V18. Clarified no fix planned for product Totally Integrated Automation Portal (TIA Portal) V16"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -198,8 +210,50 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC Information Server 2022",
+                  "name": "Opcenter Execution Foundation",
                   "product_id": "CSAFPID-0001"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Opcenter Execution Foundation"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Opcenter Quality",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Opcenter Quality"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Opcenter RDL",
+                  "product_id": "CSAFPID-0003"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Opcenter RDL"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC Information Server 2022",
+                  "product_id": "CSAFPID-0004"
                 }
               }
             ],
@@ -213,7 +267,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC Information Server 2024",
-                  "product_id": "CSAFPID-0002"
+                  "product_id": "CSAFPID-0005"
                 }
               }
             ],
@@ -227,7 +281,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC PCS neo V4.0",
-                  "product_id": "CSAFPID-0003"
+                  "product_id": "CSAFPID-0006"
                 }
               }
             ],
@@ -241,7 +295,7 @@
                 "name": "<V4.1_Update_2",
                 "product": {
                   "name": "SIMATIC PCS neo V4.1",
-                  "product_id": "CSAFPID-0004"
+                  "product_id": "CSAFPID-0007"
                 }
               }
             ],
@@ -255,7 +309,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC PCS neo V5.0",
-                  "product_id": "CSAFPID-0005"
+                  "product_id": "CSAFPID-0008"
                 }
               }
             ],
@@ -269,7 +323,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SINEC NMS",
-                  "product_id": "CSAFPID-0006"
+                  "product_id": "CSAFPID-0009"
                 }
               }
             ],
@@ -283,7 +337,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V16",
-                  "product_id": "CSAFPID-0007"
+                  "product_id": "CSAFPID-0010"
                 }
               }
             ],
@@ -297,7 +351,7 @@
                 "name": "<V17_Update_8",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V17",
-                  "product_id": "CSAFPID-0008"
+                  "product_id": "CSAFPID-0011"
                 }
               }
             ],
@@ -308,10 +362,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V18_Update_5",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V18",
-                  "product_id": "CSAFPID-0009"
+                  "product_id": "CSAFPID-0012"
                 }
               }
             ],
@@ -322,10 +376,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V19_Update_3",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V19",
-                  "product_id": "CSAFPID-0010"
+                  "product_id": "CSAFPID-0013"
                 }
               }
             ],
@@ -363,7 +417,10 @@
           "CSAFPID-0007",
           "CSAFPID-0008",
           "CSAFPID-0009",
-          "CSAFPID-0010"
+          "CSAFPID-0010",
+          "CSAFPID-0011",
+          "CSAFPID-0012",
+          "CSAFPID-0013"
         ]
       },
       "remediations": [
@@ -380,12 +437,15 @@
             "CSAFPID-0007",
             "CSAFPID-0008",
             "CSAFPID-0009",
-            "CSAFPID-0010"
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013"
           ]
         },
         {
           "category": "mitigation",
-          "details": "In addition if no RT server machines are used, port 4004 can be filtered completely",
+          "details": "In addition if no RT server machines are used, port 4004 can be blocked completely",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
@@ -396,14 +456,18 @@
             "CSAFPID-0007",
             "CSAFPID-0008",
             "CSAFPID-0009",
-            "CSAFPID-0010"
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013"
           ]
         },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
-            "CSAFPID-0003"
+            "CSAFPID-0006",
+            "CSAFPID-0010"
           ]
         },
         {
@@ -412,46 +476,46 @@
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
             "CSAFPID-0005",
-            "CSAFPID-0007"
+            "CSAFPID-0008"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V17 Update 8 or later version",
           "product_ids": [
-            "CSAFPID-0008"
+            "CSAFPID-0011"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 5 or later version",
+          "product_ids": [
+            "CSAFPID-0012"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V19 Update 3 or later version",
+          "product_ids": [
+            "CSAFPID-0013"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V4.1 Update 2 or later version",
           "product_ids": [
-            "CSAFPID-0004"
+            "CSAFPID-0007"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update UMC to V2.11.6. Contact customer support to receive patch and update information.",
           "product_ids": [
-            "CSAFPID-0006"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update UMC to V2.13.1 as delivered via TIA Portal V17 Update 8. \nSee \nhttps://support.industry.siemens.com/cs/ww/en/view/109780337/ \"UMC Basics\" (Article ID: 109780337, V2.2, 04/2022) chapter 3.1 Installation for further instructions.",
-          "product_ids": [
             "CSAFPID-0009"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109784441/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update UMC to V2.13.1 as delivered via TIA Portal V17 Update 8. See \nhttps://support.industry.siemens.com/cs/ww/en/view/109780337/ \"UMC Basics\" (Article ID: 109780337, V2.2, 04/2022) chapter 3.1 Installation for further instructions.",
-          "product_ids": [
-            "CSAFPID-0010"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109784441/"
+          ]
         }
       ],
       "scores": [
@@ -472,7 +536,10 @@
             "CSAFPID-0007",
             "CSAFPID-0008",
             "CSAFPID-0009",
-            "CSAFPID-0010"
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013"
           ]
         }
       ],

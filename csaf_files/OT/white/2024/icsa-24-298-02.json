@@ -5,10 +5,17 @@
         "names": [
           "elcazator"
         ],
-        "organization": "ELEX FEIGONG RESEARCH INSTITUTE of Elex CyberSecurity, Inc.",
+        "organization": "ELEX FEIGONG RESEARCH INSTITUTE",
+        "summary": "reporting this vulnerability to CISA"
+      },
+      {
+        "names": [
+          "ELEX FEIGONG RESEARCH INSTITUTE"
+        ],
+        "organization": "Elex CyberSecurity, Inc",
         "summary": "reporting this vulnerability to CISA"
       }
-     ],
+    ],
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "distribution": {
