@@ -2,10 +2,14 @@
   "document": {
     "acknowledgments": [
       {
+        "organization": "Siemens ProductCERT",
+        "summary": "reporting this vulnerability to CISA."
+      },
+      {
         "names": [
           "Corstiaan Klos"
         ],
-        "summary": "reporting this vulnerability to Siemens"
+        "summary": "reporting the vulnerability CVE-2024-46887 to Siemens."
       }
     ],
     "category": "csaf_security_advisory",
@@ -36,7 +40,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       },
       {
@@ -165,7 +169,7 @@
     ],
     "title": "Siemens SIMATIC S7-1500 CPUs",
     "tracking": {
-      "current_release_date": "2024-10-08T00:00:00.000000Z",
+      "current_release_date": "2024-11-12T00:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
@@ -180,10 +184,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2024-11-12T00:00:00.000000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added remediations for SIMATIC S7-1500 CPU 1518-4 PN/DP MFP, CPU 1518-4 PN/DP MFP, CPU 1518F-4 PN/DP MFP, CPU 1518F-4 PN/DP MFP and CPU 1518-4 PN/DP MFP"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -1424,7 +1434,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V3.1.4",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP (6ES7518-4AX00-1AB0)",
                   "product_id": "CSAFPID-0066",
@@ -1443,7 +1453,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V3.1.4",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP (6ES7518-4AX00-1AC0)",
                   "product_id": "CSAFPID-0067",
@@ -1481,7 +1491,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V3.1.4",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP (6ES7518-4FX00-1AB0)",
                   "product_id": "CSAFPID-0069",
@@ -1500,7 +1510,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V3.1.4",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP (6ES7518-4FX00-1AC0)",
                   "product_id": "CSAFPID-0070",
@@ -2568,7 +2578,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V3.1.4",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1518-4 PN/DP MFP (6AG1518-4AX00-4AC0)",
                   "product_id": "CSAFPID-0127",
@@ -2788,10 +2798,6 @@
             "CSAFPID-0051",
             "CSAFPID-0053",
             "CSAFPID-0054",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0069",
-            "CSAFPID-0070",
             "CSAFPID-0073",
             "CSAFPID-0074",
             "CSAFPID-0075",
@@ -2844,8 +2850,7 @@
             "CSAFPID-0122",
             "CSAFPID-0123",
             "CSAFPID-0124",
-            "CSAFPID-0125",
-            "CSAFPID-0127"
+            "CSAFPID-0125"
           ]
         },
         {
@@ -2886,10 +2891,15 @@
             "CSAFPID-0063",
             "CSAFPID-0064",
             "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067",
             "CSAFPID-0068",
+            "CSAFPID-0069",
+            "CSAFPID-0070",
             "CSAFPID-0071",
             "CSAFPID-0072",
             "CSAFPID-0126",
+            "CSAFPID-0127",
             "CSAFPID-0128"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"

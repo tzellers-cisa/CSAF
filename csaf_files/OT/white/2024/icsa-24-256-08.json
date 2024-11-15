@@ -34,7 +34,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       },
       {
@@ -163,7 +163,7 @@
     ],
     "title": "Siemens Industrial Products",
     "tracking": {
-      "current_release_date": "2024-09-10T00:00:00.000000Z",
+      "current_release_date": "2024-11-12T00:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
@@ -178,10 +178,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2024-11-12T00:00:00.000000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix releases for SIMATIC WinCC V8.0, SIMATIC WinCC V7.5, and SIMATIC WinCC Runtime Professional V18"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -281,7 +287,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V18_Update_5",
                 "product": {
                   "name": "SIMATIC WinCC Runtime Professional V18",
                   "product_id": "CSAFPID-0007"
@@ -323,7 +329,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All_versions_with_installed_WebRH",
+                "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC WinCC V7.4",
                   "product_id": "CSAFPID-0010"
@@ -337,7 +343,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V7.5_SP2_Update_18",
                 "product": {
                   "name": "SIMATIC WinCC V7.5",
                   "product_id": "CSAFPID-0011"
@@ -351,7 +357,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V8.0_Update_5",
                 "product": {
                   "name": "SIMATIC WinCC V8.0",
                   "product_id": "CSAFPID-0012"
@@ -426,11 +432,8 @@
           "details": "Currently no fix is available",
           "product_ids": [
             "CSAFPID-0005",
-            "CSAFPID-0007",
             "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0011",
-            "CSAFPID-0012"
+            "CSAFPID-0009"
           ]
         },
         {
@@ -446,6 +449,13 @@
           "details": "Update to V1.1 or later version",
           "product_ids": [
             "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 5 or later version",
+          "product_ids": [
+            "CSAFPID-0007"
           ]
         },
         {
@@ -467,6 +477,21 @@
           "details": "Update to V4.1 Update 2 or later version",
           "product_ids": [
             "CSAFPID-0004"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.5 SP2 Update 18 or later version",
+          "product_ids": [
+            "CSAFPID-0011"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793460/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V8.0 Update 5 or later version",
+          "product_ids": [
+            "CSAFPID-0012"
           ]
         }
       ],

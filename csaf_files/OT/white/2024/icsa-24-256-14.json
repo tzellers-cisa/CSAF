@@ -26,7 +26,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "The products listed below contain a remote code execution vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code with high privileges.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+        "text": "The products listed below contain a remote code execution vulnerability that could allow an authenticated remote attacker to execute arbitrary code with high privileges.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -41,7 +41,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       },
       {
@@ -170,7 +170,7 @@
     ],
     "title": "Siemens SIMATIC SCADA and PCS 7 Systems",
     "tracking": {
-      "current_release_date": "2024-09-10T00:00:00.000000Z",
+      "current_release_date": "2024-11-12T00:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
@@ -185,10 +185,22 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2024-10-08T00:00:00.000000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix information for  SIMATIC WinCC Runtime Professional V19  and updated fix information for SIMATIC PCS 7 V9.1"
+        },
+        {
+          "date": "2024-11-12T00:00:00.000000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix information for SIMATIC WinCC Runtime Professional V18"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -241,7 +253,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V9.1_SP2_UC06",
                 "product": {
                   "name": "SIMATIC PCS 7 V9.1",
                   "product_id": "CSAFPID-0004"
@@ -283,7 +295,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V18_Update_5",
                 "product": {
                   "name": "SIMATIC WinCC Runtime Professional V18",
                   "product_id": "CSAFPID-0007"
@@ -297,7 +309,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V19_Update_3",
                 "product": {
                   "name": "SIMATIC WinCC Runtime Professional V19",
                   "product_id": "CSAFPID-0008"
@@ -396,12 +408,21 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
+            "CSAFPID-0006"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 5 or later version",
+          "product_ids": [
+            "CSAFPID-0007"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V19 Update 3 or later version",
+          "product_ids": [
             "CSAFPID-0008"
           ]
         },
@@ -422,9 +443,25 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update WinCC to V7.5 SP2 Update 18 or later version. See \nhttps://support.industry.siemens.com/cs/ww/en/view/109793460/",
+          "details": "Update to V9.1 SP2 UC06 or later version",
           "product_ids": [
             "CSAFPID-0004"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to PCS7 V9.1 SP2 UC06 or later version\n\nhttps://support.industry.siemens.com/cs/document/109812242/",
+          "product_ids": [
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to PCS7 V9.1 SP2 UC06 or later version\n\nhttps://support.industry.siemens.com/cs/ww/en/view/109812242/",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
           ]
         }
       ],
